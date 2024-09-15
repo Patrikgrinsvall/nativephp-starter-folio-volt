@@ -6,6 +6,8 @@
 ## Usage
 - composer install
 - npm install
+- cp .env.example .env
+- php artisan key:generate
 - php artisan native:install
 - php artisan native:serve
 
