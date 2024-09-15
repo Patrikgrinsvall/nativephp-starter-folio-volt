@@ -9,6 +9,7 @@
 - cp .env.example .env
 - php artisan key:generate
 - php artisan native:install
+- npm run dev
 - php artisan native:serve
 
 ### Adding new views
