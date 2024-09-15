@@ -1,0 +1,9 @@
+{
+    "conflicts": [
+        {
+            "id": "e4853772-5bc1-41d9-984a-34798cff702f",
+            "currentContent": "<?php\n\nnamespace Database\\Seeders;\n\nuse App\\Models\\User;\n// use Illuminate\\Database\\Console\\Seeds\\WithoutModelEvents;\nuse Illuminate\\Database\\Seeder;\n\nclass DatabaseSeeder extends Seeder\n{\n    /**\n     * Seed the application's database.\n     */\n    public function run(): void\n    {\n        // User::factory(10)->create();\n\n        User::factory()->create([\n            'name' => 'Test User',\n            'email' => 'test@example.com',\n        ]);\n    }\n}\n",
+            "newContent": "<?php\n\nnamespace Database\\Seeders;\n\nuse Illuminate\\Database\\Seeder;\n// use Illuminate\\Database\\Console\\Seeds\\WithoutModelEvents;\n\nuse App\\Models\\User;\n\nclass DatabaseSeeder extends Seeder\n{\n    /**\n     * Seed the application's database.\n     */\n    public function run(): void\n    {\n        User::factory()\n            ->count(1)\n            ->create([\n                'email' => 'admin@admin.com',\n                'password' => \\Hash::make('admin'),\n            ]);\n\n        $this->call(RunSeeder::class);\n    }\n}\n"
+        }
+    ]
+}
