@@ -16,3 +16,6 @@
 - Example: If you create "home" folder with an index.blade.php and an edit.blade.php file the routes `/home` and `/home/edit` will be created.
 
 ### Adding new components
+
+- Add new components in components folder
+- See navigation.blade.php and navigation-item.blade.php for an example component.
